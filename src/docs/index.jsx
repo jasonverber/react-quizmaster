@@ -1,13 +1,30 @@
 import React from "react";
 import { render } from "react-dom";
-import MyComponent from "../../lib";
+import {Quiz, QuizQuestion, QuizAnswer} from "../../lib";
 import "./styles.css";
 
 function Demo() {
   return (
     <div>
-      <h1>Demo with examples of the component</h1>
-      <MyComponent color="brown">Wow what a button</MyComponent>
+      <h1>Demo</h1>
+      <Quiz questionsPerPage='all' questions={[
+        {
+          prompt: 'What is the capital of Germany?',
+          answers: ['Frankfurt','Bonn',{text: 'Berlin', correct:true},'Munich']
+        },
+        {
+          prompt: 'What was the capital of West Germany?',
+          answers: ['Frankfurt',{text:'Bonn', correct:true},{text: 'Berlin', correct:false},'Munich']
+        },
+        {
+          prompt: 'What is the capital of Tennessee?',
+          answers: ['Frankfurt','Bonn',{text: 'Nashville', correct:true},'Munich']
+        },
+        {
+          prompt: 'What was the capital of New Hampshire?',
+          answers: ['Frankfurt',{text:'Concord', correct:true},{text: 'Berlin', correct:false},'Munich']
+        }
+      ]} />
     </div>
   );
 }
