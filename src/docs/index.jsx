@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import {Quiz, QuizQuestion, QuizAnswer} from "../../lib";
+import {Quiz} from "../../lib";
 import "./styles.css";
 
 function Demo() {
