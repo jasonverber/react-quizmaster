@@ -15,16 +15,7 @@ function Demo() {
         {
           prompt: 'What was the capital of West Germany?',
           answers: ['Frankfurt',{text:'Bonn', correct:true},{text: 'Berlin', correct:false},'Munich']
-        },
-        {
-          prompt: 'What is the capital of Tennessee?',
-          answers: ['Frankfurt','Bonn',{text: 'Nashville', correct:true},'Munich']
-        },
-        {
-          prompt: 'What was the capital of New Hampshire?',
-          answers: ['Frankfurt',{text:'Concord', correct:true},{text: 'Berlin', correct:false},'Munich']
-        }
-      ]} />
+        }]} />
     </div>
   );
 }
