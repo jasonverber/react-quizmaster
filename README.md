@@ -1,3 +1,3 @@
 # Quizmaster React Component
 
-TKTK
+A quiz component for React.
