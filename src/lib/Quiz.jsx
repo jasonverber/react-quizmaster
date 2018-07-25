@@ -19,15 +19,15 @@ class Quiz extends Component {
   constructor(props) {
     super(props);
 
-    let {questions, questionsPerPage, currentPage, inProgress, beforeStart, afterStart, score, penalty, autoEval, endEval, hideEndEval, className, header, footer, beginButton, evaluateButton, continueButton, finishButton, startMessage, finishMessage, pageLabel, scoreLabel, overallScoreLabel, evalHandler, outcomeHandler, ...userProps} = this.props;
+    let {questions, questionsPerPage, currentPage, inProgress, startCallback, finishCallback, score, penalty, autoEval, endEval, hideEndEval, className, header, footer, beginButton, evaluateButton, continueButton, finishButton, startMessage, finishMessage, pageLabel, scoreLabel, overallScoreLabel, evalHandler, outcomeHandler, ...userProps} = this.props;
 
     this.state = {
       questions: this.prepareQuestions(questions),
       questionsPerPage: questionsPerPage === 'all' ? questions.length : (questionsPerPage || 1),
       currentPage: currentPage!==undefined ? currentPage : -1,
       inProgress: currentPage!==undefined && currentPage>-1 ? true : (inProgress || false),
-      beforeStart,
-      afterStart,
+      startCallback,
+      finishCallback,
       score: score!==undefined ? score : 0,
       penalty: penalty || 0,
       autoEval: autoEval || false,
