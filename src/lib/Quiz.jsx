@@ -19,7 +19,7 @@ class Quiz extends Component {
   constructor(props) {
     super(props);
 
-    let {questions, questionsPerPage, currentPage, inProgress, beforeStart, afterStart, score, penalty, autoEval, endEval, hideEndEval, className, header, footer, beginButton, evaluateButton, continueButton, finishButton, startMessage, finishMessage, pageLabel, scoreLabel, evalHandler, outcomeHandler, ...userProps} = this.props;
+    let {questions, questionsPerPage, currentPage, inProgress, beforeStart, afterStart, score, penalty, autoEval, endEval, hideEndEval, className, header, footer, beginButton, evaluateButton, continueButton, finishButton, startMessage, finishMessage, pageLabel, scoreLabel, overallScoreLabel, evalHandler, outcomeHandler, ...userProps} = this.props;
 
     this.state = {
       questions: this.prepareQuestions(questions),
@@ -45,6 +45,7 @@ class Quiz extends Component {
       finishMessage: finishMessage || 'Quiz complete!',
       pageLabel : pageLabel || 'Page: ',
       scoreLabel : scoreLabel || 'Score: ',
+      overallScoreLabel: overallScoreLabel || 'Overall Score: ',
       evalHandler,
       outcomeHandler
     }
@@ -185,7 +186,7 @@ class Quiz extends Component {
       ):('')}
       {outcomeHandler ? outcomeHandler(questions) : ''}
       {score!==false?(
-        <p>Overall Score: {score}</p>
+        <p>{overallScoreLabel}{score}</p>
       ):('')}
       </>
     );

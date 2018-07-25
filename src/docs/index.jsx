@@ -45,6 +45,7 @@ function Demo() {
             questionsPerPage={1}
             evalHandler={evalHandler}
             outcomeHandler={outcomeHandler}
+            startMessage="Let's find out!"
             finishMessage='And the results are in...'
             hideEndEval={true}
             score={false}
