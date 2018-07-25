@@ -174,7 +174,7 @@ class Quiz extends Component {
   }
 
   renderQuizFinish = () => {
-    let {finishMessage, score, questions, endEval, hideEndEval, className, outcomeHandler} = this.state;
+    let {finishMessage, score, questions, endEval, hideEndEval, className, outcomeHandler, overallScoreLabel} = this.state;
     questions = questions.map(question=>{question.displayed=true; return question});
     return (
       <>
