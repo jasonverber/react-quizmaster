@@ -2,3 +2,34 @@ body {
   background: #eee;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+.QuizMasterSelected, .SurveyMasterSelected {
+  font-weight:bold
+}
+
+.QuizMasterCorrectAnswer {
+    color:green;
+    font-weight:bold;
+}
+
+.QuizMasterMissingAnswer {
+  color:green;
+  font-weight:bold;
+  font-style:italic;
+}
+
+.QuizMasterIncorrectAnswer {
+  color:red
+}
+
+.QuizMasterCorrect span::before {
+  content: ' Correct! ';
+  font-weight: bold;
+  color: green
+}
+
+.QuizMasterIncorrect span::before {
+  content: ' Incorrect! ';
+  font-weight: bold;
+  color: red
+}
